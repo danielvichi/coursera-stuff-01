@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="myFristApp">
+  <head>
+    <meta charset="utf-8">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <title>first AngularJS app</title>
+  </head>
+  <body>
+
+    <h1> Name Calculator </h1>
+    <div ng-controller="NameCalculatorController">
+      <div id="target">
+        Your name:
+        <input type="text"
+          ng-model="name"
+          ng-keyup="displayNumeric();">
+      </div>
+
+      <div>
+        <p> Total Numeric value bla bla: </p>
+        {{totalValue}}
+      </div>
+      {{name}}
+    </div>
+
+  </body>
+
+  <script type="text/javascript">
+    var elem = document.getElementById('target');
+    console.log(elem);
+    console.log(elem.getAttribute("ng-model"));
+
+    var elem2 = document.querySelector("[ng-model]");
+    console.log(elem2);
+    console.log(elem2.getAttribute('ng-model'));
+  </script>
+</html>
